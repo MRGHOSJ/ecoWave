@@ -1,0 +1,179 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0; /* Light gray background */
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #87CEEB, #87CEFA); /* Sky blue circular gradient */
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+    overflow: hidden; /* Hide scroll bars */
+}
+
+#header {
+    background: #fff; /* White background */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+}
+
+#logo img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+}
+
+#website-name {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333; /* Dark gray text */
+}
+
+#landing-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Dark gray text */
+	background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) ), url(../img/pexelsphoto2765872.jpeg);
+    background-size: cover; /* Make the background image cover the entire container */
+    background-position: center; /* Center the background image */
+    transition: color 0.3s ease-in-out; /* Smooth text color transition */}
+
+.landing-content {
+    text-align: center;
+}
+
+#showGlobeButton {
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text */
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px; /* Rounded corners */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth background color and transform transition */
+}
+
+#showGlobeButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#globe-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.5); /* Initially small size */
+    animation: fadeInScale 0.5s ease-in-out forwards; /* Smooth fade-in and scaling animation */
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) ), url("https://i.pinimg.com/originals/f7/07/d6/f707d6f3fdc58cf63e067995b60cb948.gif");
+    background-size: cover; /* Make the background image cover the entire container */
+    background-position: center; /* Center the background image */
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#globe-container.visible {
+    opacity: 1; /* Visible when active */
+}
+
+#globe {
+    cursor: grab;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    width: 80%;
+    max-width: 600px; /* Limit maximum width */
+    background: #fff;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 999;
+}
+
+@keyframes slideInFromRight {
+    from {
+        right: -450px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+.modal-container.active {
+    display: block; /* Show the modal */
+    animation: slideInFromRight 0.3s ease-in-out forwards; /* Slide the modal onto the screen */
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Add space between header and content */
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333; /* Dark gray text */
+}
+
+.close {
+    cursor: pointer;
+    font-size: 24px;
+    color: #888; /* Gray close icon */
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.hidden {
+    display: none;
+}
+.home__help {
+    position: fixed;
+    top: 590px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.home__help-icon img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.home__help-text {
+    font-size: 14px;
+}

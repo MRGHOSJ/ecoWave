@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Océan Muséal Interactif</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <a id="website-name" href="/">Eco Wave</a>
+    </div>
+
+    <div id="landing-page">
+        <div class="landing-content">
+            <h2>Embarquez pour une aventure océanique unique en son genre</h2>
+            <button id="showGlobeButton">Explorer les Expositions</button>
+
+        </div>
+    </div>
+
+    <div id="globe-container" class="hidden">
+        <div id="container">
+            <div id="globe"></div>
+            <div id="info-panel" class="modal-container hidden"></div>
+            <div class="home__help">
+                <div class="home__help-icon">
+                    <img src="data:image/png;base64,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">
+                </div>
+                <div class="home__help-text">
+                    Saisissez et faites tourner le globe pour interagir,<br>cliquez sur un point pour explorer une histoire.                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="globe.js"></script>
+    <script>
+        document.getElementById('showGlobeButton').addEventListener('click', function() {
+            var landingPage = document.getElementById('landing-page');
+            var globeContainer = document.getElementById('globe-container');
+
+            landingPage.style.display = 'none';
+            globeContainer.style.display = 'block';
+
+        });
+    </script>
+</body>
+</html>
